@@ -1,0 +1,27 @@
+<form [formGroup]="form" *ngIf="form" class="form-class">
+
+    <div class="name-container">
+        <input type="text"
+        class="form-control-name"
+        formControlName="tableN"
+        >
+    </div>
+
+    <ng-container formArrayName="fields">
+        <ng-container *ngFor="let fieldForm of fields.controls; let i = index">
+            <div class="field-form-row" [formGroupName]="i">
+                <input type="text" [formControlName]="'name'" class="field-name">
+                <input type="text" [formControlName]="'type'" class="field-type" placeholder="Data type">
+                <div>
+                    <label for="nullable">null?</label>
+                    <input name="nullable" type="checkbox" [formControlName]="'nullable'" class="field-check">
+                </div>
+                <input type="text" [formControlName]="'indexType'" class="field-index-type" placeholder="Index type">
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <div class="form-row">
+        <button (click)="addField()">Add Field</button>
+    </div>
+  </form>

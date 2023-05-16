@@ -1,0 +1,28 @@
+.form-class {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .name-container { 
+        width: 100%;
+        background-color: rgb(227, 232, 233);
+
+        .form-control-name {
+            background-color: rgb(227, 232, 233);
+            border: none;
+        }
+    }
+
+    .field-form-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .field-name {
+            width: 100px;
+        }
+
+        .field-type, .field-index-type {
+            width: 80px;
+        }
+    }
+}

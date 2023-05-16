@@ -1,0 +1,10 @@
+<div class="side-bar-container">
+    <div class="side-bar-header">
+        <h5>Tables</h5>
+        <button class="new-table-button" (click)="addNewTable()">New table</button>
+    </div>
+
+    <div class="side-bar-content">
+        <app-dynamic-form-component *ngFor="let table of tables" [table]="table"></app-dynamic-form-component>
+    </div>
+</div>
