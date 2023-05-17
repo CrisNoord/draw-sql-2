@@ -6,10 +6,20 @@
     .name-container { 
         width: 100%;
         background-color: rgb(227, 232, 233);
+        display: flex;
+        justify-content: space-between;
 
         .form-control-name {
             background-color: rgb(227, 232, 233);
             border: none;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
         }
     }
 
@@ -24,5 +34,13 @@
         .field-type, .field-index-type {
             width: 80px;
         }
+    }
+
+    .add-field {
+        color: white;
+        font-weight: 700;
+        background-color: mediumpurple;
+        border: none;
+        border-radius: 5px;
     }
 }

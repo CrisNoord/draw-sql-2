@@ -1,0 +1,9 @@
+<div class="table-container">
+    <div class="table-header">{{table?.tableN}}</div>
+    <div class="fields-container">
+        <div class="field" *ngFor="let field of table?.fields">
+            <span class="name">{{field.name}}</span>
+            <span class="type">{{ field.nullable ? field.type + '?' : field.type}}</span>
+        </div>
+    </div>
+</div>

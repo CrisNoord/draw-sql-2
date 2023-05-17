@@ -5,6 +5,8 @@
     </div>
 
     <div class="side-bar-content">
-        <app-dynamic-form-component *ngFor="let table of tables" [table]="table"></app-dynamic-form-component>
+        <ng-container *ngIf="(data$ | async) as data">
+            <app-dynamic-form-component *ngFor="let table of data.tables" [table]="table"></app-dynamic-form-component>
+        </ng-container>
     </div>
 </div>

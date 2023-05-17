@@ -5,23 +5,29 @@
         class="form-control-name"
         formControlName="tableN"
         >
+        <button *ngIf="table.id !== 1" class="delete-button" (click)="deleteTable()">Delete</button>
     </div>
 
     <ng-container formArrayName="fields">
-        <ng-container *ngFor="let fieldForm of fields.controls; let i = index">
+        <ng-container *ngFor="let fieldForm of fields.controls; let i = index;">
             <div class="field-form-row" [formGroupName]="i">
-                <input type="text" [formControlName]="'name'" class="field-name">
-                <input type="text" [formControlName]="'type'" class="field-type" placeholder="Data type">
+                <input type="text" [formControlName]="'name'" class="field-name" [id]="i">
+                <select [formControlName]="'type'">
+                    <option *ngFor="let option of typeOptions" [value]="option.value">{{option.value}}</option>
+                </select>
                 <div>
                     <label for="nullable">null?</label>
                     <input name="nullable" type="checkbox" [formControlName]="'nullable'" class="field-check">
                 </div>
-                <input type="text" [formControlName]="'indexType'" class="field-index-type" placeholder="Index type">
+                <select [formControlName]="'indexType'">
+                    <option *ngFor="let option of indexOptions" [value]="option.value">{{option.value}}</option>
+                </select>
+                <i *ngIf="i !== 0" class="fa-solid fa-trash" (click)="deleteField(i)"></i>
             </div>
         </ng-container>
     </ng-container>
 
     <div class="form-row">
-        <button (click)="addField()">Add Field</button>
+        <button class="add-field" (click)="addField()">Add Field</button>
     </div>
   </form>

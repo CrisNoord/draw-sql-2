@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "data": [
+        {
+          "tableN": "table_1",
+          "id": 1,
+          "fields": [
+            {
+              "id": 0,
+              "name": "id",
+              "type": "bigint",
+              "nullable": false,
+              "indexType": "primarykey"
+            }
+          ]
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

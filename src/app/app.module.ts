@@ -10,6 +10,9 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { dataReducer } from './state/data.reducer';
+import { TableComponent } from './components/table/table.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +20,15 @@ import { dataReducer } from './state/data.reducer';
     SideBarComponent,
     MainViewComponent,
     HeaderComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
     StoreModule.forRoot({data: dataReducer}),
-    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

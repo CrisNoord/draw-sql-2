@@ -1,0 +1,26 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    width: 254px;
+    background-color: white;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+    .table-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(227, 232, 233);
+    }
+
+    .fields-container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+
+        .field {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

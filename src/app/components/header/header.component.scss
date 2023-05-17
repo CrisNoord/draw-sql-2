@@ -1,5 +1,16 @@
 .header {
-    width: 100%;
-    height: 50px;
+    height: 55px;
     background-color: mediumpurple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+
+    .button-class {
+        width: 119px;
+        height: 35px;
+        background-color: mediumpurple;
+        color: white;
+        border: 1px solid white;
+    }
 }
